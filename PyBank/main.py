@@ -10,9 +10,11 @@ month_count = 0 #initializes to 0 since data contains headers
 total_profit = 0
 initial_profit = 0
 profit_delta = []
+max_profit = 0
+max_loss = 0
 
-with open(csvpath, newline='', encoding='UTF-8') as csvfile:
-    csvreader = csv.reader(csvfile, delimiter=',')
+with open(csvpath, newline='', encoding='UTF-8') as csvresults:
+    csvreader = csv.reader(csvresults, delimiter=',')
     next(csvreader) #skipping the headers
     #for loop that will cycle through every row retrieving relevant data
     for month in csvreader:
@@ -22,8 +24,15 @@ with open(csvpath, newline='', encoding='UTF-8') as csvfile:
         initial_profit = int(month[1]) #sets the current profit as the initial profit for next iteration
         if month_count > 1: #can't calculate profit for 1st month, since there is no previous value   
             profit_delta.append(final_profit)
+        #determining max profit/losses
+        if final_profit > max_profit:
+            max_profit = final_profit
+            max_month = month[0]
+        if final_profit < max_loss:
+            max_loss = final_profit
+            min_month = month[0]
 
-#done with the csv file, can be closed now
+#done with the csv results, can be closed now
 
 #calculating the average profit/loss for each month
 
@@ -33,8 +42,19 @@ sum_delta = 0
 for delta in range(len(profit_delta)):
     sum_delta += profit_delta[delta]
 
-average_profit = sum_delta / (len(profit_delta)+1) #adding 1 to the index since indexes start at 0
+average_profit = sum_delta / (len(profit_delta))
 
-print (len(profit_delta))
-print (average_profit)
+#creating results.txt
+with open("results.txt", "w") as results:
+    results.write ("Financial Analysis \n")
+    results.write ("------------------------\n")
+    results.write ("Total months: " + str(month_count) + "\n")
+    results.write ("Total: $" + str(total_profit) + "\n")
+    results.write ("Average change: $" + str(average_profit) + "\n")
+    results.write ("Greatest increase in profits: " + max_month + "($" + str(max_profit) + ")\n")
+    results.write ("Greatest decrease in losses: " + min_month + "($" + str(max_loss) + ")\n")
 
+#printing the results to the terminal
+with open("results.txt", "r") as results:
+    for line in results:
+        print (line)

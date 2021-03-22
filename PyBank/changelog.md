@@ -8,4 +8,10 @@
 - Created the pseudo-code for changes in profit/losses and the average
 - Implemented the script to calculate average profit/losses per month
 - Bugs found:
-    - [ ] delta_profit list is only taking 85 months, should be 86
+    - [X] delta_profit list has 85 elements, should be 86
+        - actually, 85 elements is correct
+        - 87 rows of data - 1 header row - 1st month can't be calculated = 85 elements
+- After further testing no bugs or logical errors found
+- Implemented code that creates [results.txt](results.txt) and prints it out on the console
+
+
