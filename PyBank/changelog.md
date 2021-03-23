@@ -2,7 +2,7 @@
 
 # Changelog
 
-## 03/22/2021
+## **03/22/2021**
 - Started the analysis for the finantial data
 - python script in [main.py](main.py)
 - Determined total number of months and total amount of profit/losses

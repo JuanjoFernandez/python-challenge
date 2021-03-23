@@ -34,3 +34,7 @@
 - analysis done for the finantial data, for details check [changelog.md](PyBank/changelog.md)
 - updated readme with links for PyBank
 - analysis done for the voting poll data, for details check [changelog.md](/PyPoll/changelog.md)
+
+## **03/23/2021**
+- started data reformatting for the employee data
+- for details check [changelog.md](PyBoss/changelog.md)
