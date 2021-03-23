@@ -2,38 +2,44 @@
 import os
 import csv
 
-#function that will retrieve a column from a csv file
-#parameters: path to the file, index of column to be retrieved
-#function considers the csv file contains headers
-#function returns a list
-def csv_column(csvpath, column):
-
-    #opening the csv file
-    with open(csvpath, newline='', encoding='UTF-8') as csvdata:
-        column_name = []
-        csvreader = csv.reader(csvdata, delimiter=',')
-        next(csvreader) #skipping the header
-
-        #for loop that will cycle through every row in the file
-        for row in csvreader:
-            column_name.append(row[column])
-        return column_name
-
 #setting ths csv path
 csvpath = os.path.join('Resources', 'employee_data - copia.csv')
 
-#retrieving the information for employee name
-employee_name = csv_column(csvpath, 1)
-
-#transformation from name into First and Last name
+#variable initialization
+employee_id = []
 first_name = []
 last_name = []
+dob_new = []
+ssn_new = []
 
-#splitting the string
-for name in range(len(employee_name)):
-    employee_name[name]= employee_name[name].split(' ', 2)
+#opening the csv file
+with open(csvpath, newline='', encoding='UTF-8') as csvdata:
+    column_name = []
+    csvreader = csv.reader(csvdata, delimiter=',')
+    next(csvreader) #skipping the header
 
-#storing first and last name
-for name in employee_name:
-    first_name.append(name[0])
-    last_name.append(name[1])
+    #for loop that cycles through every row and creates the new lists of data
+    for row in csvreader:
+        employee_id.append(row[0]) #copies the employer id
+
+        #splitting the name into first and last name
+        employee_name = row[1]
+        employee_name = employee_name.split(' ', 2)
+        first_name.append(employee_name[0])
+        last_name.append(employee_name[1])
+
+        #reformatting date of birth into MM/DD/YYYY
+        dob_old = row[2]
+        dob_old = dob_old.split('-', 3)
+        dob_new.append(dob_old[1] + "/" + dob_old[2] + "/" + dob_old[0])
+
+        #masking SSN
+        ssn_old = row[3]
+        ssn_old = ssn_old.split('-', 3)
+        ssn_new.append("***-**-" + ssn_old[2])
+
+
+ 
+for x in range(len(ssn_new)):
+    print (ssn_new[x])
+print (len(ssn_new))

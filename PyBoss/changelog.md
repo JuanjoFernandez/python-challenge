@@ -8,3 +8,4 @@
 - created the function to retrieve columns from the csv file
 - separated first and last name
 - [ ]using [employee_data - copia.csv](Resources/employee_data%20-%20copia.csv) for testing, update csv path when testing is done
+- reformatted name, date of birth, ssn
