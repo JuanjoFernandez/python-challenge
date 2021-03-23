@@ -57,4 +57,4 @@ with open("results.txt", "w") as results:
 #printing the results to the terminal
 with open("results.txt", "r") as results:
     for line in results:
-        print (line)
+        print (line, end = " ")

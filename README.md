@@ -33,3 +33,4 @@
 ## **03/22/2021**
 - analysis done for the finantial data, for details check [changelog.md](PyBank/changelog.md)
 - updated readme with links for PyBank
+- analysis done for the voting poll data, for details check [changelog.md](/PyPoll/changelog.md)
