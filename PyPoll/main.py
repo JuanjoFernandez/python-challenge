@@ -2,7 +2,7 @@
 import os
 import csv
 
-#opening the csv file
+#path to csv file
 csvpath = os.path.join('Resources', 'election_data.csv')
 
 #variable initialization
@@ -10,9 +10,11 @@ total_votes = 0 #initialized to 0 because data table has headers
 candidate_list = []
 votes_by_candidate = []
 
+#opening the csv file
 with open(csvpath, newline='', encoding='UTF-8') as csvresults:
     csvreader = csv.reader(csvresults, delimiter=',')
     next(csvreader) #skipping the headers
+    #for loop that will cycle through every vote casted
     for vote in csvreader:
         total_votes += 1 #updating the total number of votes
 
@@ -39,8 +41,9 @@ with open(csvpath, newline='', encoding='UTF-8') as csvresults:
 #calculating and creating the list with percentage of votes
 percentage_by_candidate = []
 
+#for loop that will cycle through every item in the votes by candidate list
 for x in range(len(votes_by_candidate)):
-    votes_percentage = round(100* (votes_by_candidate[x] / total_votes), 3)
+    votes_percentage = round(100* (votes_by_candidate[x] / total_votes), 3) #rounds the percentage to 3 decimal places
     percentage_by_candidate.append(votes_percentage)    
 
 #determining the winner of the election

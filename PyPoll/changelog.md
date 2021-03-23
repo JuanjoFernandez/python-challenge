@@ -4,6 +4,7 @@
 
 ## **03/22/2021**
 - Added the header to changelog
+- python script in [main.py](main.py)
 - Created lists for candidate_list, votes_by_candidate
 - Created the percentage vote list
 - Determined winner of the election by total number of votes, not percentage
