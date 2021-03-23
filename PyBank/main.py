@@ -2,7 +2,7 @@
 import os
 import csv
 
-#opening budget_data.csv
+#setting path to csv file
 csvpath = os.path.join('Resources', 'budget_data.csv')
 
 #variable initialization
@@ -13,6 +13,7 @@ profit_delta = []
 max_profit = 0
 max_loss = 0
 
+#opening budget_data.csv
 with open(csvpath, newline='', encoding='UTF-8') as csvresults:
     csvreader = csv.reader(csvresults, delimiter=',')
     next(csvreader) #skipping the headers
@@ -39,10 +40,11 @@ with open(csvpath, newline='', encoding='UTF-8') as csvresults:
 #variable initialization
 sum_delta = 0
 
+#for loop that will cycle through every month to add/substract it to the total profit
 for delta in range(len(profit_delta)):
     sum_delta += profit_delta[delta]
 
-average_profit = sum_delta / (len(profit_delta))
+average_profit = round(sum_delta / (len(profit_delta)),2) #rounding the average profit to 2 decimals to be consistent with currency data
 
 #creating results.txt
 with open("results.txt", "w") as results:
