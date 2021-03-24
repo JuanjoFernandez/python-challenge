@@ -16,7 +16,6 @@ state_new = []
 
 #opening the csv file
 with open(csvpath, newline='', encoding='UTF-8') as csvdata:
-    column_name = []
     csvreader = csv.reader(csvdata, delimiter=',')
     next(csvreader) #skipping the header
 
@@ -43,9 +42,26 @@ with open(csvpath, newline='', encoding='UTF-8') as csvdata:
         #using us_state_abbrev to change state name
         state_old = row[4]
         state_new.append(us_state_abbrev[state_old])
+#done with the csv file, can close now
 
+#creating the new csv file
+csvpath = os.path.join ('Resources', 'employee_data_new.csv')
 
- 
-for x in range(len(state_new)):
-    print (state_new[x])
-print (len(state_new))
+with open(csvpath, 'w', newline='', encoding='UTF-8') as csvdata:
+    csvwriter = csv.writer(csvdata, delimiter=',')
+
+    #Creating the headers
+    headers = ["Emp ID","First Name","Last Name","DOB","SSN","State"]
+    csvwriter.writerow(headers)
+    #next(csvwriter)
+
+    #for loop that will create each row for the new file
+    for row in range(len(employee_id)):
+        index = row #since we have headers list indexes are -1 the row of the file
+        row = [employee_id[index],
+                first_name[index],
+                last_name[index],
+                dob_new[index],
+                ssn_new[index],
+                state_new[index]]
+        csvwriter.writerow(row)
