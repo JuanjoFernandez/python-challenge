@@ -10,5 +10,9 @@
 - [ ]using [employee_data - copia.csv](Resources/employee_data%20-%20copia.csv) for testing, update csv path when testing is done
 - reformatted name, date of birth, ssn
 
-## **03/24/2021
+## **03/24/2021**
 - aded [us_state_abbrev.py](us_state_abbrev.py) from [afhaque](https://gist.github.com/afhaque/29f0f4f37463c447770517a6c17d08f5) GitHub
+- changed state name to 2 characters abbreviation
+- created the reformatted employee database csv file
+- testing shows no logical or coding mistakes
+- results on [employee_data_new.csv](Resources/employee_data_new.csv)
