@@ -4,7 +4,7 @@ import csv
 from us_state_abbrev import us_state_abbrev
 
 #setting ths csv path
-csvpath = os.path.join('Resources', 'employee_data - copia.csv')
+csvpath = os.path.join('Resources', 'employee_data.csv')
 
 #variable initialization
 employee_id = []
