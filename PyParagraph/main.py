@@ -7,15 +7,23 @@ print("|                                          |")
 print("|  Welcome to the paragraph analysis tool  |")
 print("|                                          |")
 print("============================================")
-file = input("What's the name of the file you want to analyze? (in Resources folder):")
+#file = input("What's the name of the file you want to analyze? (in Resources folder):")
+#for testing purposes, switch comment above and below when testing is done
+file = 'paragraph_1.txt'
 
-txtpath = os.path.join('Resources', file)
+
 #checking if the file exists
-file_exists = False
+txtpath = os.path.join('Resources', file)
+file_exists = os.path.exists(txtpath)
 while file_exists == False:
     file_exists = os.path.exists(txtpath)
     if file_exists == False:
-        file = input("Error: file doesn't exist, make sure it's on the /Resources folder and is typed correctly:")
+        file = input("Error: file does not exist, make sure it is on the /Resources folder and it is typed correctly:")
         txtpath = os.path.join('Resources', file)
 
+#opening the txt file
+paragraph = open(txtpath)
 
+print(paragraph)
+
+    
