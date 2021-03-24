@@ -53,15 +53,13 @@ with open(csvpath, 'w', newline='', encoding='UTF-8') as csvdata:
     #Creating the headers
     headers = ["Emp ID","First Name","Last Name","DOB","SSN","State"]
     csvwriter.writerow(headers)
-    #next(csvwriter)
-
+    
     #for loop that will create each row for the new file
     for row in range(len(employee_id)):
-        index = row #since we have headers list indexes are -1 the row of the file
-        row = [employee_id[index],
-                first_name[index],
-                last_name[index],
-                dob_new[index],
-                ssn_new[index],
-                state_new[index]]
+        row = [employee_id[row],
+                first_name[row],
+                last_name[row],
+                dob_new[row],
+                ssn_new[row],
+                state_new[row]]
         csvwriter.writerow(row)
