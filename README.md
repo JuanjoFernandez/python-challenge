@@ -38,3 +38,7 @@
 ## **03/23/2021**
 - started data reformatting for the employee data
 - for details check [changelog.md](PyBoss/changelog.md)
+
+## **03/24/2021**
+- finished the PyBoss project
+- details in [changelog.md](PyBoss/changelog.md)
