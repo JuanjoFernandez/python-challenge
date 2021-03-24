@@ -1,6 +1,7 @@
 #Importing libraries
 import os
 import csv
+from us_state_abbrev import us_state_abbrev
 
 #setting ths csv path
 csvpath = os.path.join('Resources', 'employee_data - copia.csv')
@@ -11,6 +12,7 @@ first_name = []
 last_name = []
 dob_new = []
 ssn_new = []
+state_new = []
 
 #opening the csv file
 with open(csvpath, newline='', encoding='UTF-8') as csvdata:
@@ -38,8 +40,12 @@ with open(csvpath, newline='', encoding='UTF-8') as csvdata:
         ssn_old = ssn_old.split('-', 3)
         ssn_new.append("***-**-" + ssn_old[2])
 
+        #using us_state_abbrev to change state name
+        state_old = row[4]
+        state_new.append(us_state_abbrev[state_old])
+
 
  
-for x in range(len(ssn_new)):
-    print (ssn_new[x])
-print (len(ssn_new))
+for x in range(len(state_new)):
+    print (state_new[x])
+print (len(state_new))
