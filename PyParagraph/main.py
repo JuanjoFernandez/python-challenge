@@ -1,5 +1,6 @@
 #importing libraries
 import os
+import re
 
 #asking the user for the path and name of the file to be analyzed
 print("============================================")
@@ -30,8 +31,11 @@ for _ in paragraph:
     if _ == " ":
         word_count += 1
 
+#counting sentences
+sentences = re.split("(?<=[.!?]) +", paragraph)
+sentence_count = len(sentences)
 
 print(paragraph)
-print(str(word_count) + "words")
-
+print(str(word_count) + " words")
+print(str(sentence_count) + " sentences")
     
