@@ -35,7 +35,28 @@ for _ in paragraph:
 sentences = re.split("(?<=[.!?]) +", paragraph)
 sentence_count = len(sentences)
 
+#calculating average letter by word
+
+#initializing variables
+letters_by_word = []
+
+#splitting the paragraph in separate words
+paragraph_by_words = paragraph.split(" ", -1)
+
+#obtaining number of letters
+for word in paragraph_by_words:
+    letters_by_word.append(len(word))
+
+#calculating average
+total_words = 0
+for _ in letters_by_word:
+    total_words += letters_by_word[_]
+average_letters = float(total_words) / float(word_count)
+        
+
 print(paragraph)
 print(str(word_count) + " words")
 print(str(sentence_count) + " sentences")
-    
+print(paragraph_by_words)
+print(letters_by_word)
+print(average_letters)
