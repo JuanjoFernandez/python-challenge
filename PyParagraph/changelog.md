@@ -7,4 +7,8 @@
 - added user input, error handler for non-existing files
 - added word count, code works but tested against MS-Word word count and there is a disparity
     - The disparity is caused by "enhancer-promoter" MS-Word interprets it as 2 words, which shouldn't, code works fine
-- added, tested and debugged sentence count and average letters by word
+- added, tested and debugged:
+    - sentence count
+    - average letters by word
+    - average words by sentence
+- added format to the output

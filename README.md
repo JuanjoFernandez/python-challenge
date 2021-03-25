@@ -42,5 +42,5 @@
 ## **03/24/2021**
 - finished the PyBoss project
 - details in [changelog.md](PyBoss/changelog.md)
-- started paragraph analysis project
+- finished paragraph analysis project
 - updated [changelog.md](PyParagraph/changelog.md) for paragraph analysis
