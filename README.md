@@ -44,3 +44,7 @@
 - details in [changelog.md](PyBoss/changelog.md)
 - finished paragraph analysis project
 - updated [changelog.md](PyParagraph/changelog.md) for paragraph analysis
+
+## **03/25/2021**
+- several changes in PyParagraph, check [changelog.md](PyParagraph/changelog.md)
+- fixed save file location for PyPoll
