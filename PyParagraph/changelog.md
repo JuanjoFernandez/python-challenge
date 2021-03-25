@@ -19,4 +19,5 @@
 - changed print to terminal code to match the txt file
 - added some user instructions
 - testing stage finished, commented variables that skip user inputs
-- analysis done on both paragraphs provided, no errors found
+- analysis done on both paragraphs provided
+    - [] paragraph_2 has blank lines need to adjust logic to avoid errors

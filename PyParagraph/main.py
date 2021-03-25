@@ -13,9 +13,9 @@ while keep_going == 'y':
     print("|  Analysis are saved as <name of file>.txt in \Analysis folder  |")
     print("|                 Make sure file names are unique                |")
     print("==================================================================")
-    file = input("What's the name of the file you want to analyze? (in Resources folder):")
+    #file = input("What's the name of the file you want to analyze? (in Resources folder):")
     #for testing purposes, switch comment above and below when testing is done
-    #file = 'paragraph_1.txt'
+    file = 'paragraph_2.txt'
 
     #checking if the file exists
     txtpath = os.path.join('Resources', file)
@@ -90,5 +90,8 @@ while keep_going == 'y':
         for line in analysis:
             print (line, end = " ")
 
-    keep_going = input ("Do you want to analyze another file? (y/n): ")
+    print(sentence)
+
+    keep_going = 'n'
+    #keep_going = input ("Do you want to analyze another file? (y/n): ")
 
