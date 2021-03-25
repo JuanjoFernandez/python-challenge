@@ -69,13 +69,11 @@ for _ in range(len(words_by_sentence)):
     sum_words += words_by_sentence[_]
 average_words = float(sum_words) / float(sentence_count)
         
-
-print(paragraph)
-print(str(word_count) + " words")
-print(str(sentence_count) + " sentences")
-print(paragraph_by_words)
-print(letters_by_word)
-print(average_letters)
-print(sentences)
-print(words_by_sentence)
-print(average_words)
+print ("==========================")
+print ("|   Paragraph Analysis   |")
+print ("==========================")
+print ("File analyzed: "+ file)
+print ("Approximate word count: " + str(word_count))
+print("Approximate sentence count:" + str(sentence_count))
+print("Average letter count: " + "{:.2f}".format(average_letters))
+print("Average sentence lenght: " + "{:.2f}".format(average_words))
