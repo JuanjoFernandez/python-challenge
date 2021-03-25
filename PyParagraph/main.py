@@ -5,11 +5,14 @@ import re
 keep_going = 'y'
 while keep_going == 'y':
     #asking the user for the path and name of the file to be analyzed
-    print("============================================")
-    print("|                                          |")
-    print("|  Welcome to the paragraph analysis tool  |")
-    print("|                                          |")
-    print("============================================")
+    print("==================================================================")
+    print("|                                                                |")
+    print("|             Welcome to the paragraph analysis tool             |")
+    print("|                                                                |")
+    print("==================================================================")
+    print("|  Analysis are saved as <name of file>.txt in \Analysis folder  |")
+    print("|                 Make sure file names are unique                |")
+    print("==================================================================")
     #file = input("What's the name of the file you want to analyze? (in Resources folder):")
     #for testing purposes, switch comment above and below when testing is done
     file = 'paragraph_1.txt'
