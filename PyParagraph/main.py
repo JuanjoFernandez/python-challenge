@@ -49,9 +49,25 @@ for word in paragraph_by_words:
 
 #calculating average
 total_words = 0
-for _ in letters_by_word:
+for _ in range(len(letters_by_word)):
     total_words += letters_by_word[_]
 average_letters = float(total_words) / float(word_count)
+
+#calculating average words per sentence
+
+#initializing variables
+words_by_sentence = []
+
+#obtaining number of words per sentence
+for sentence in sentences:
+    sentence_to_evaluate = sentence.split(' ', -1)
+    words_by_sentence.append(len(sentence_to_evaluate))
+
+#calculating average
+sum_words = 0
+for _ in range(len(words_by_sentence)):
+    sum_words += words_by_sentence[_]
+average_words = float(sum_words) / float(sentence_count)
         
 
 print(paragraph)
@@ -60,3 +76,6 @@ print(str(sentence_count) + " sentences")
 print(paragraph_by_words)
 print(letters_by_word)
 print(average_letters)
+print(sentences)
+print(words_by_sentence)
+print(average_words)
