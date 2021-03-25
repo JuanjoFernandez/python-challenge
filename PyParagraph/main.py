@@ -70,13 +70,16 @@ while keep_going == 'y':
         sum_words += words_by_sentence[_]
     average_words = float(sum_words) / float(sentence_count)
             
-    print ("==========================")
-    print ("|   Paragraph Analysis   |")
-    print ("==========================")
-    print ("File analyzed: "+ file)
-    print ("Approximate word count: " + str(word_count))
-    print("Approximate sentence count: " + str(sentence_count))
-    print("Average letter count: " + "{:.2f}".format(average_letters))
-    print("Average sentence lenght: " + "{:.2f}".format(average_words))
+    #saving analysis to /analysis/file.txt
+    txtpath = os.path.join ('analysis', file)
+    with open(txtpath, 'w') as analysis:
+        analysis.write("==========================\n")
+        analysis.write ("|   Paragraph Analysis   |\n")
+        analysis.write ("==========================\n")
+        analysis.write ("File analyzed: "+ file + "\n")
+        analysis.write ("Approximate word count: " + str(word_count) + "\n")
+        analysis.write("Approximate sentence count: " + str(sentence_count) + "\n")
+        analysis.write("Average letter count: " + "{:.2f}".format(average_letters) + "\n")
+        analysis.write("Average sentence lenght: " + "{:.2f}".format(average_words) + "\n")
 
     keep_going = input ("Do you want to analyze another file? (y/n): ")
