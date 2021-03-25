@@ -82,4 +82,10 @@ while keep_going == 'y':
         analysis.write("Average letter count: " + "{:.2f}".format(average_letters) + "\n")
         analysis.write("Average sentence lenght: " + "{:.2f}".format(average_words) + "\n")
 
+    #printing the txt file to the terminal
+    with open(txtpath, "r") as analysis:
+        for line in analysis:
+            print (line, end = " ")
+
     keep_going = input ("Do you want to analyze another file? (y/n): ")
+
