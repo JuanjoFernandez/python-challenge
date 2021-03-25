@@ -12,3 +12,11 @@
     - average letters by word
     - average words by sentence
 - added format to the output
+
+## **03/25/2021**
+- added user input to keep analyzing paragraphs
+- created results txt file
+- changed print to terminal code to match the txt file
+- added some user instructions
+- testing stage finished, commented variables that skip user inputs
+- analysis done on both paragraphs provided, no errors found
