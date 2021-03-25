@@ -58,7 +58,8 @@ zipped_results = zip(candidate_list, percentage_by_candidate, votes_by_candidate
 
 
 #creating and formatting the txt file
-with open("results.txt", "w") as results:
+txtpath = os.path.join('analysis', 'results.txt')
+with open(txtpath, "w") as results:
     results.write("Elections results \n")
     results.write("---------------------\n")
     results.write("Total votes: " + str(total_votes) + "\n")
@@ -70,7 +71,7 @@ with open("results.txt", "w") as results:
     results.write("---------------------\n")
 
 #printing the results to the terminal
-with open("results.txt", "r") as results:
+with open(txtpath, "r") as results:
     for line in results:
         print (line, end = " ")
 
