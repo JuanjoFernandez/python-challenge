@@ -36,7 +36,7 @@ while keep_going == 'y':
             word_count += 1
 
     #counting sentences
-    sentences = re.split("(?<=[.!?]) +", paragraph)
+    sentences = re.split("(?<=[.!?])", paragraph)
     sentence_count = len(sentences)
 
     #calculating average letter by word
@@ -90,7 +90,8 @@ while keep_going == 'y':
         for line in analysis:
             print (line, end = " ")
 
-    print(sentence)
+    print(sentences)
+    print(paragraph)
 
     keep_going = 'n'
     #keep_going = input ("Do you want to analyze another file? (y/n): ")
