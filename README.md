@@ -18,17 +18,17 @@
     - copied *.csv files into /Resources
     - created [changelog.md](PyBank/changelog.md)
 - PyPoll
-    - created "main.py", /Resources, /analysis
+    - created [main.py](PyPoll/main.py), /Resources, /analysis
     - copied *.csv files into /Resources
-    - created "/PyPoll/changelog.md"
+    - created [changelog.md](/PyPoll/changelog.md)
 - PyBoss
-    - created "main.py", /Resources, /analysis
+    - created [main.py](PyBoss/main.py), /Resources, /analysis
     - copied *.csv files into /Resources
-    - created "/PyBoss/changelog.md"
+    - created [changelog.md](/PyBoss/changelog.md)
 - PyParagraph
-    - created "main.py", /Resources, /analysis
+    - created [main.py](PyParagraph/main.py), /Resources, /analysis
     - copied *.txt files into /Resources
-    - created "/PyParagraph/changelog.md"
+    - created [changelog.md](/PyParagraph/changelog.md)
 
 ## **03/22/2021**
 - analysis done for the finantial data, for details check [changelog.md](PyBank/changelog.md)
