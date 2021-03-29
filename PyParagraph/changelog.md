@@ -24,3 +24,7 @@
 
 ## **03/29/2021**
 - changed the regex to (?<=[.!?]) seems to work better
+- tested script with testing paragraph
+    - discrepancies between test results provided and script
+    - Script, MS-word and [WordCounter](https://wordcounter.net/) counts 120 words in the test paragraph, script is correct
+    
