@@ -21,11 +21,10 @@ while keep_going == 'y':
     #checking if the file exists
     txtpath = os.path.join('Resources', file)
     file_exists = os.path.exists(txtpath)
-    while file_exists == False:
+    while file_exists == False:       
+        file = input("Error: file does not exist, make sure it is on the /Resources folder and it is typed correctly:")
+        txtpath = os.path.join('Resources', file)
         file_exists = os.path.exists(txtpath)
-        if file_exists == False:
-            file = input("Error: file does not exist, make sure it is on the /Resources folder and it is typed correctly:")
-            txtpath = os.path.join('Resources', file)
 
     #opening and storing the txt file
     paragraph = open(txtpath, encoding = "UTF-8").read()
