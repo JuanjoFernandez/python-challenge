@@ -15,7 +15,7 @@ while keep_going == 'y':
     print("==================================================================")
     #file = input("What's the name of the file you want to analyze? (in Resources folder):")
     #for testing purposes, switch comment above and below when testing is done
-    file = 'paragraph_1.txt'
+    file = 'testing.txt'
 
     #checking if the file exists
     txtpath = os.path.join('Resources', file)
@@ -27,7 +27,7 @@ while keep_going == 'y':
             txtpath = os.path.join('Resources', file)
 
     #opening and storing the txt file
-    paragraph = open(txtpath).read()
+    paragraph = open(txtpath, encoding = "UTF-8").read()
 
     #counting words
     word_count = 1 #initializes to 1 because last word has no space
@@ -37,7 +37,7 @@ while keep_going == 'y':
 
     #counting sentences
     sentences = re.split("(?<=[.!?])", paragraph)
-    sentence_count = len(sentences)
+    sentence_count = len(sentences) - 1 #substracting one because split creates an empty element at the end
 
     #calculating average letter by word
 
@@ -90,9 +90,7 @@ while keep_going == 'y':
         for line in analysis:
             print (line, end = " ")
 
-    print(sentences)
-    print(paragraph)
-
     keep_going = 'n'
     #keep_going = input ("Do you want to analyze another file? (y/n): ")
 
+print (sentences)

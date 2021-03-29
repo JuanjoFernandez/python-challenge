@@ -1,0 +1,8 @@
+==========================
+|   Paragraph Analysis   |
+==========================
+File analyzed: testing.txt
+Approximate word count: 120
+Approximate sentence count: 5
+Average letter count: 4.60
+Average sentence lenght: 25.00
