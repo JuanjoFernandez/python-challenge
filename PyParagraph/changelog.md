@@ -28,3 +28,4 @@
     - discrepancies between test results provided and script
     - Script, MS-word and [WordCounter](https://wordcounter.net/) counts 120 words in the test paragraph, script is correct
 - cleaned up the testing code
+- fixed recursive logic for file not found error handler
