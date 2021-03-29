@@ -48,3 +48,7 @@
 ## **03/25/2021**
 - several changes in PyParagraph, check [changelog.md](PyParagraph/changelog.md)
 - fixed save file location for PyPoll
+
+## **03/29/2021**
+- several changes in PyParagraph, check [changelog.md](PyParagraph/changelog.md)
+- project completed
