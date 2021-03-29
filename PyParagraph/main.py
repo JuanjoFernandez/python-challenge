@@ -15,7 +15,7 @@ while keep_going == 'y':
     print("==================================================================")
     #file = input("What's the name of the file you want to analyze? (in Resources folder):")
     #for testing purposes, switch comment above and below when testing is done
-    file = 'paragraph_2.txt'
+    file = 'paragraph_1.txt'
 
     #checking if the file exists
     txtpath = os.path.join('Resources', file)

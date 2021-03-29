@@ -20,7 +20,7 @@
 - added some user instructions
 - testing stage finished, commented variables that skip user inputs
 - analysis done on both paragraphs provided
-    - [] paragraph_2 has blank lines need to adjust logic to avoid errors
+    - [X] paragraph_2 has blank lines need to adjust logic to avoid errors
 
 ## **03/29/2021**
-- changed the regex to (?<=[.!?]) seems to work better, still an error with abbreviations
+- changed the regex to (?<=[.!?]) seems to work better
