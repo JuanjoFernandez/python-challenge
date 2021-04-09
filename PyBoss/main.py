@@ -45,7 +45,7 @@ with open(csvpath, newline='', encoding='UTF-8') as csvdata:
 #done with the csv file, can close now
 
 #creating the new csv file
-csvpath = os.path.join ('Resources', 'employee_data_new.csv')
+csvpath = os.path.join ('analysis', 'employee_data_new.csv')
 
 with open(csvpath, 'w', newline='', encoding='UTF-8') as csvdata:
     csvwriter = csv.writer(csvdata, delimiter=',')
