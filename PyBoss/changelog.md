@@ -15,4 +15,4 @@
 - changed state name to 2 characters abbreviation
 - created the reformatted employee database csv file
 - testing shows no logical or coding mistakes
-- results on [employee_data_new.csv](Resources/employee_data_new.csv)
+- results on [employee_data_new.csv](analysis/employee_data_new.csv)
